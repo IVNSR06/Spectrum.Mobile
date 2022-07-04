@@ -19,8 +19,8 @@ namespace Spectrum.Mobile
             InitializeComponent();
 
             SetupServices();
-            
-            MainPage = new UserPage();
+
+            MainPage = new NavigationPage (new UserPage ());
         }
         
         private void SetupServices()
@@ -28,7 +28,8 @@ namespace Spectrum.Mobile
             var services = new ServiceCollection();
 
             services.AddSingleton<ISpectrumService, SpectrumService>();
-            
+            services.AddSingleton<INavigationService, NavigationService>();
+
             services.AddTransient<UserPageViewModel>();
             services.AddTransient<PostPageViewModel>();
 
