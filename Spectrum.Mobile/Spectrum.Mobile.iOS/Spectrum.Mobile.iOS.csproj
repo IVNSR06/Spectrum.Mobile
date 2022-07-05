@@ -89,7 +89,6 @@
     <ItemGroup>
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
-        <Compile Include="Renderer\CustomMapRenderer.cs" />
         <None Include="Entitlements.plist" />
         <None Include="Info.plist" />
         <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,7 +107,6 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
-        <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2478" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Spectrum.Mobile\Spectrum.Mobile.csproj">
@@ -119,6 +117,9 @@
     <ItemGroup>
       <BundleResource Include="Resources\RightArrow.png" />
       <BundleResource Include="Resources\XamarinPin.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Renderer" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

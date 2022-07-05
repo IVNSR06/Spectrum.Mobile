@@ -20,7 +20,7 @@ namespace Spectrum.Mobile
 
             SetupServices();
 
-            MainPage = new NavigationPage (new UserPage ());
+            MainPage = new LoginPage();
         }
         
         private void SetupServices()
@@ -30,8 +30,9 @@ namespace Spectrum.Mobile
             services.AddSingleton<ISpectrumService, SpectrumService>();
             services.AddSingleton<INavigationService, NavigationService>();
 
-            services.AddTransient<UserPageViewModel>();
-            services.AddTransient<PostPageViewModel>();
+            services.AddTransient<LoginPageViewModel>();
+            services.AddTransient<HomePageViewModel>();
+            services.AddTransient<ProductDetailPageViewModel>();
 
             ServiceProvider = services.BuildServiceProvider();
         }

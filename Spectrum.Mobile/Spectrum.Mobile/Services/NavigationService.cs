@@ -23,7 +23,7 @@ namespace Spectrum.Mobile.Services
         {
             Page page = CreatePage(viewModelType, parameter);
 
-            if (page is UserPageViewModel)
+            if (page is LoginPageViewModel)
             {
                 Application.Current.MainPage = new NavigationPage(page);
             }

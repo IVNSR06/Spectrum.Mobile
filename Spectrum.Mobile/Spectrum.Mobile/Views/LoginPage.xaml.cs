@@ -5,12 +5,12 @@ using Xamarin.Forms.Xaml;
 namespace Spectrum.Mobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PostPage : ContentPage
+    public partial class LoginPage : ContentPage
     {
-        public PostPage()
+        public LoginPage()
         {
             InitializeComponent();
-            BindingContext = App.ServiceProvider.GetService(typeof(PostPageViewModel));
+            BindingContext = App.ServiceProvider.GetService(typeof(LoginPageViewModel));
         }
     }
 }

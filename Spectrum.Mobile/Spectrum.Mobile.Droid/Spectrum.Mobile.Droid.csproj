@@ -46,11 +46,9 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
-        <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2478" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.cs" />
-        <Compile Include="Renderer\CustomMapRenderer.cs" />
         <Compile Include="Resources\Resource.Designer.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
@@ -74,6 +72,7 @@
         </ProjectReference>
     </ItemGroup>
     <ItemGroup>
+      <Folder Include="Renderer" />
       <Folder Include="Resources\drawable" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

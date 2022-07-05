@@ -34,13 +34,5 @@
 	<string>Spectrum.Mobile</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This app uses maps components</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>This app uses maps components</string>
-	<key>NSLocationUsageDescription</key>
-	<string>This app uses maps components</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>This app uses maps components</string>
 </dict>
 </plist>

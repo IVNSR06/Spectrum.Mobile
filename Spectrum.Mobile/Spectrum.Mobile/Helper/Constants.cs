@@ -2,8 +2,8 @@ namespace Spectrum.Mobile.Helper
 {
     public static class Constants
     {
-        public const string BaseURL = "https://jsonplaceholder.typicode.com";
-        public const string GetUserEndPoint = "users";
-        public const string GetPostEndPoint = "posts";
+        public const string BaseURL = "https://dummyjson.com";
+        public const string Login = "auth/login";
+        public const string GetProducts = "products";
     }
 }

@@ -9,12 +9,32 @@ namespace Spectrum.Mobile.ViewModels
 {
     public abstract class BaseViewModel : BindableObject
     {
-        #region Properties
         public ISpectrumService _spectrumService;
         public INavigationService _navigationService;
         
+        private bool _isErrorLabelVisible;
+        public bool IsErrorLabelVisible
+        {
+            get => _isErrorLabelVisible;
+            set
+            {
+                _isErrorLabelVisible = value;
+                RaisePropertyChanged(() => _isErrorLabelVisible);
+            }
+        }
+
+        private string _errorMessage;
+        public string ErrorMessage
+        {
+            get => _errorMessage;
+            set
+            {
+                _errorMessage = value;
+                RaisePropertyChanged(() => _errorMessage);
+            }
+        }
+        
         public string Title { get; set; }
-        #endregion
         public BaseViewModel(ISpectrumService spectrumService, INavigationService navigationService)
         {
             _spectrumService = spectrumService;
