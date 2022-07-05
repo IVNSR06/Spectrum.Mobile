@@ -134,5 +134,17 @@ namespace Spectrum.Mobile.Resources {
                 return ResourceManager.GetString("PersonalInformation", resourceCulture);
             }
         }
+        
+        internal static string BasicInformation {
+            get {
+                return ResourceManager.GetString("BasicInformation", resourceCulture);
+            }
+        }
+        
+        internal static string LocalizationWarning {
+            get {
+                return ResourceManager.GetString("LocalizationWarning", resourceCulture);
+            }
+        }
     }
 }

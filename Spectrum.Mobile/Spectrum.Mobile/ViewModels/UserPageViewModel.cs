@@ -4,7 +4,6 @@ using System.Windows.Input;
 using Spectrum.Mobile.Helper;
 using Spectrum.Mobile.Model;
 using Spectrum.Mobile.Services;
-using Spectrum.Mobile.Views;
 using Xamarin.Forms;
 
 namespace Spectrum.Mobile.ViewModels
@@ -14,7 +13,7 @@ namespace Spectrum.Mobile.ViewModels
         #region Properties
         public ObservableCollection<User> UserList { get; private set; }
 
-        public ICommand NavgateToDetailProfileCommand { get; private set; }
+        public ICommand NavgateToDetailProfileCommand { get; }
         #endregion
         
         public UserPageViewModel(ISpectrumService spectrumService, INavigationService navigationService):base(spectrumService, navigationService)
@@ -29,6 +28,9 @@ namespace Spectrum.Mobile.ViewModels
         private async Task GetUserList()
         {
             var result = await _spectrumService.GetAsync<ObservableCollection<User>>(Constants.GetUserEndPoint);
+            result[0].Address.Geo = new Geo { Lat = "36.16100823506389", Lng = "-86.77812217160002" };
+            result[1].Address.Geo = new Geo { Lat = "36.14118885441203", Lng = "-86.7936325493875" };
+            result[2].Address.Geo = new Geo { Lat = "36.210761169259875", Lng = "-86.69259769131985" };
             UserList = result;
         }
         

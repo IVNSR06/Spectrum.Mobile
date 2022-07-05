@@ -12,5 +12,7 @@ namespace Spectrum.Mobile.Services
         {
             return await Constants.BaseURL.AppendPathSegment(method).GetJsonAsync<T>();
         }
+        
+        
     }
 }

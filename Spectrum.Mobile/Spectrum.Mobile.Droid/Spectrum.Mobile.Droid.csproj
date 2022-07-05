@@ -46,9 +46,11 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
+        <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2478" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.cs" />
+        <Compile Include="Renderer\CustomMapRenderer.cs" />
         <Compile Include="Resources\Resource.Designer.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
@@ -57,6 +59,7 @@
         <None Include="Assets\AboutAssets.txt" />
         <None Include="Properties\AndroidManifest.xml" />
         <None Include="Resources\RightArrow.png" />
+        <None Include="Resources\XamarinPin.png" />
     </ItemGroup>
     <ItemGroup>
         <AndroidResource Include="Resources\layout\Tabbar.axml" />
@@ -69,6 +72,9 @@
             <Project>{A1C45507-124E-480A-AEA6-121A9AE67F68}</Project>
             <Name>Spectrum.Mobile</Name>
         </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Resources\drawable" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
